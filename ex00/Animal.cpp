@@ -6,7 +6,7 @@ Animal::Animal(){
 }
 
 Animal::Animal(const Animal& newanimal ){
-    if (this != &newanimal)
+    std::cout << "Animal base class copy constructor called" << std::endl;
         type = newanimal.getType();
 }
 
