@@ -18,7 +18,6 @@ Animal& Animal::operator=(const Animal& newanimal){
     return(*this);
 }
 
-
 void Animal::makeSound() const {
     std::cout << "Animal sound!!!"<< std::endl;
 }
