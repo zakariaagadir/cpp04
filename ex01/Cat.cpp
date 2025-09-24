@@ -7,15 +7,17 @@ Cat::Cat(){
 }
 Cat::Cat(const Cat& newcat){
     std::cout << "Cat derived class copy constructor called" << std::endl;
-    this->type = newcat.getType();
-    delete (this->brain);
+    Animal(newcat);
     this->brain = new Brain(*(newcat.getBrain()));
 }
 
 Cat& Cat::operator=(const Cat& newcat){
     if(this != &newcat)
     {
-        this->type = newcat.getType();
+        Animal::operator=(newcat);
+        Brain* temp = new Brain(*(newcat.getBrain()));
+        delete(this->brain);
+        this->brain = temp;
     }
     return(*this);
 }

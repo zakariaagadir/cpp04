@@ -17,7 +17,7 @@ void Dog::setType(std::string& newtype){
 Dog& Dog::operator=(const Dog& newdog){
     if(this != &newdog)
     {
-        this->type = newdog.getType();
+        Animal::operator=(newdog);
     }
     return(*this);
 }
