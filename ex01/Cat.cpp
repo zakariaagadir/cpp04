@@ -5,9 +5,9 @@ Cat::Cat(){
     type = "Cat";
     this->brain = new Brain();
 }
-Cat::Cat(const Cat& newcat){
+Cat::Cat(const Cat& newcat):Animal(newcat){
     std::cout << "Cat derived class copy constructor called" << std::endl;
-    Animal(newcat);
+    
     this->brain = new Brain(*(newcat.getBrain()));
 }
 
@@ -30,6 +30,16 @@ const Brain* Cat::getBrain() const{
     return (this->brain);
 }
 
+void Cat::setBrain(Brain* newbran){
+    if (this->brain != newbran)
+    {
+        Brain *temp = new Brain(*newbran);
+        delete(this->brain);
+        this->brain = temp;
+    }
+}
+
+
 void Cat::setType(std::string& newtype){
     type = newtype;
 }
@@ -42,4 +52,5 @@ void Cat::makeSound() const {
 
 Cat::~Cat(){
     std::cout << "Cat derived class deconstructor called" << std::endl;
+    delete(brain);
 }

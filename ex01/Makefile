@@ -6,7 +6,7 @@
 #    By: zmounji <zmounji@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/09/05 22:53:01 by zmounji           #+#    #+#              #
-#    Updated: 2025/09/22 22:47:04 by zmounji          ###   ########.fr        #
+#    Updated: 2025/09/25 11:54:56 by zmounji          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ NAME = a.out
 CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 
-SRC = main.cpp Animal.cpp Dog.cpp Cat.cpp
+SRC = main.cpp Animal.cpp Dog.cpp Cat.cpp Brain.cpp
 OBJ = $(SRC:.cpp=.o)
 
 all: $(NAME)

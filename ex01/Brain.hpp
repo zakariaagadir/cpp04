@@ -10,8 +10,8 @@ class Brain{
         Brain();
         Brain(const Brain& newbrain);
         Brain& operator=(const Brain& newbrain);
-        std::string* getideas() const;
-        void getideas(std::string* newideas);
+        const std::string* getideas() const;
+        void setideas(std::string* newideas);
         ~Brain();
 };
 
