@@ -8,9 +8,11 @@ AMateria::AMateria(){
 
 
 AMateria::AMateria(std::string const & type){
-    (void)type;
+    this->type = type ;
 }
 
-
+const std::string& AMateria::getType() const {
+    return (type);
+}
 
 

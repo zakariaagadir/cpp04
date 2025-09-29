@@ -3,19 +3,17 @@
 
 
 #include "AMateria.hpp"
+#include "ICharacter.hpp"
 
 class Cure : public AMateria{
-    private:
-        std::string type;
     public:
         Cure();
         Cure(const Cure &other);
         Cure& operator=(const Cure& other);
-        std::string const & getType() const;
         void setType(std::string const &other);
-        AMateria* clone() const ;
-        void use(ICharacter& target) ;
-        ~Cure();
+        AMateria* clone() const override;
+        void use(ICharacter& target) override;
+        virtual ~Cure();
 };
 
 
